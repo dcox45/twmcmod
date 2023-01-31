@@ -1,0 +1,13 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="[44,)"
+license="All Rights Reserved"
+[[mods]] #mandatory
+modId="twmod"
+
+version="${file.jarVersion}" #mandatory
+displayName="Twmod" #mandatory
+
+description='''
+
+'''
