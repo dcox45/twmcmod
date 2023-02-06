@@ -1,5 +1,6 @@
 package dev.dcox.twmod;
         
+import dev.dcox.twmod.init.BlockInit;
 import dev.dcox.twmod.init.ItemInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +27,7 @@ public class TwMod{
         bus.addListener(this::addItemsToTabs);
 
         ItemInit.ITEMS.register(bus);
+        BlockInit.BLOCKS.register(bus);
 
     }
 
@@ -42,9 +44,13 @@ public class TwMod{
 
     private void addItemsToTabs(CreativeModeTabEvent.BuildContents event)
     {
-        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES)
+        if (event.getTab() == CreativeModeTabs.COMBAT)
         {
             event.accept(ItemInit.FIRST_ITEM);
+        }
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ItemInit.firstBlockItem);
         }
     }
 

@@ -3,6 +3,7 @@ package dev.dcox.twmod.init;
 import dev.dcox.twmod.TwMod;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,4 +22,7 @@ public class ItemInit {
 
 
 
+
+    public static final RegistryObject<BlockItem> firstBlockItem =
+            ITEMS.register("first_block", () -> new BlockItem(BlockInit.firstBlock.get(), new Item.Properties()));
 }
