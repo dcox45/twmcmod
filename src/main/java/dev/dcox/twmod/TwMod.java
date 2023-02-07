@@ -37,9 +37,15 @@ public class TwMod{
                 .icon(() -> new ItemStack(ItemInit.FIRST_ITEM.get()))
                 .title(Component.translatable("TW Tab"))
                 .displayItems((featureFlags, output, hasOp) -> {
+                    //for(int i = 0; i < ItemInit.ITEMS.getEntries().size())
                     output.accept(ItemInit.FIRST_ITEM.get());
                     output.accept(BlockInit.firstBlock.get());
-                    output.accept(ItemInit.first_food.get());
+                    output.accept(ItemInit.myAxe_tool.get());
+                    output.accept(ItemInit.myHoe_tool.get());
+                    output.accept(ItemInit.myPickaxe_tool.get());
+                    output.accept(ItemInit.myShovel_tool.get());
+                    output.accept(ItemInit.mySword_tool.get());
+
                 })
         );
     }
@@ -57,6 +63,16 @@ public class TwMod{
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
             event.accept(ItemInit.first_food);
+        }
+        if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES)
+        {
+            event.accept(ItemInit.myAxe_tool);
+            event.accept(ItemInit.myPickaxe_tool);
+            event.accept(ItemInit.myHoe_tool);
+            event.accept(ItemInit.myShovel_tool);
+            event.accept(ItemInit.mySword_tool);
+
+
         }
     }
 

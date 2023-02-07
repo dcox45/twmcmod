@@ -1,5 +1,11 @@
 {
   "item.twmod.first_item":"First Mod Item",
   "block.twmod.first_block" : "First Block",
-  "item.twmod.first_food": "First Food"
+  "item.twmod.first_food": "First Food",
+
+  "item.twmod.mysword_tool": "Custom Sword",
+  "item.twmod.mypickaxe_tool": "Custom Pickaxe",
+  "item.twmod.myshovel_tool": "Custom Shovel",
+  "item.twmod.myaxe_tool": "Custom Axe",
+  "item.twmod.myhoe_tool": "Custom Hoe"
 }
