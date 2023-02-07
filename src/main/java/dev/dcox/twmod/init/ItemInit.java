@@ -37,7 +37,7 @@ public class ItemInit {
                     Tiers.example_tier, 5, 3.5f, props()));
     public static final RegistryObject<AxeItem> myAxe_tool =
             ITEMS.register("myaxe_tool", () -> new AxeItem(
-                    Tiers.example_tier, 5f, 3.5f, props()));
+                    Tiers.example_tier, 7f, 5.0f, props()));
     public static final RegistryObject<HoeItem> myHoe_tool =
             ITEMS.register("myhoe_tool", () -> new HoeItem(
                     Tiers.example_tier, 5, 3.5f, props()));
@@ -61,7 +61,7 @@ public class ItemInit {
 
     public static class Tiers {
         public static final Tier example_tier = new ForgeTier(
-                4, 2200, 5.0f, 3, 350, null, () ->
+                4, 2200, 8.0f, 3.0f, 10, null, () ->
             Ingredient.of(ItemInit.FIRST_ITEM.get()));
     }
 }
