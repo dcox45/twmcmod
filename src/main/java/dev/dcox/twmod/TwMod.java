@@ -50,7 +50,7 @@ public class TwMod{
         }
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(ItemInit.firstBlockItem);
+            event.accept(BlockInit.firstBlock);
         }
     }
 

@@ -20,9 +20,4 @@ public class ItemInit {
               ITEMS.register("first_item", () -> new Item(new Item.Properties()));
 
 
-
-
-
-    public static final RegistryObject<BlockItem> firstBlockItem =
-            ITEMS.register("first_block", () -> new BlockItem(BlockInit.firstBlock.get(), new Item.Properties()));
 }
