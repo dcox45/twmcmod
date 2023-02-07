@@ -35,9 +35,10 @@ public class TwMod{
     {
         MY_TAB = event.registerCreativeModeTab(new ResourceLocation(MODID, "main_tab"), builder -> builder
                 .icon(() -> new ItemStack(ItemInit.FIRST_ITEM.get()))
-                .title(Component.translatable("tabs.twmod.main_tab"))
+                .title(Component.translatable("TW Tab"))
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ItemInit.FIRST_ITEM.get());
+                    output.accept(BlockInit.firstBlock.get());
                 })
         );
     }
