@@ -39,6 +39,7 @@ public class TwMod{
                 .displayItems((featureFlags, output, hasOp) -> {
                     output.accept(ItemInit.FIRST_ITEM.get());
                     output.accept(BlockInit.firstBlock.get());
+                    output.accept(ItemInit.first_food.get());
                 })
         );
     }
@@ -52,6 +53,10 @@ public class TwMod{
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
         {
             event.accept(BlockInit.firstBlock);
+        }
+        if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
+        {
+            event.accept(ItemInit.first_food);
         }
     }
 

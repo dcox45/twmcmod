@@ -3,6 +3,9 @@ package dev.dcox.twmod.init;
 import dev.dcox.twmod.TwMod;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -20,4 +23,18 @@ public class ItemInit {
               ITEMS.register("first_item", () -> new Item(new Item.Properties()));
 
 
+    public static final RegistryObject<Item> first_food =
+            ITEMS.register("first_food", () -> new Item(new Item.Properties().food(Foods.first_food)));
+
+    public static class Foods {
+        public static final FoodProperties first_food =
+                new FoodProperties.Builder()
+                        .nutrition(4)
+                        .saturationMod(0.3f)
+                        .alwaysEat()
+                        .meat()
+                        .fast()
+                        .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600),
+                                0.9f).build();
+    }
 }
