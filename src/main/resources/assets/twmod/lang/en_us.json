@@ -7,5 +7,10 @@
   "item.twmod.mypickaxe_tool": "Custom Pickaxe",
   "item.twmod.myshovel_tool": "Custom Shovel",
   "item.twmod.myaxe_tool": "Custom Axe",
-  "item.twmod.myhoe_tool": "Custom Hoe"
+  "item.twmod.myhoe_tool": "Custom Hoe",
+
+  "item.twmod.firestone_helmet": "Firestone Helmet",
+  "item.twmod.firestone_chestplate": "Firestone Chestplate",
+  "item.twmod.firestone_leggings": "Firestone Leggings",
+  "item.twmod.firestone_boots": "Firestone Boots"
 }
