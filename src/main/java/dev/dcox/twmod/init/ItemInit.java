@@ -76,8 +76,13 @@ public class ItemInit {
 
     public static class ToolTiers {
         public static final Tier example_tier = new ForgeTier(
-                4, 2200, 8.0f, 3.0f, 10, null, () ->
-            Ingredient.of(ItemInit.FIRST_ITEM.get()));
+                4,
+                2200,
+                8.0f,
+                3.0f,
+                10,
+                BlockInit.Tags.needs_firestone_tool,
+                () -> Ingredient.of(ItemInit.FIRST_ITEM.get()));
     }
 
     public static class ArmorTiers {
