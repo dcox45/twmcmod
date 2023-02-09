@@ -23,7 +23,13 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TwMod.MODID);
 
     public static final RegistryObject<Block> firstBlock =
-            register("first_block", () -> new Block(BlockBehaviour.Properties.of(Material.BAMBOO).friction(0.4f).strength(5.0f, 6.0f).requiresCorrectToolForDrops()), new Item.Properties());
+            register("first_block", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).friction(
+                    0.4f).strength(5.0f, 6.0f).requiresCorrectToolForDrops()), new Item.Properties());
+
+    public static final RegistryObject<Block> FIRESTONE_ORE =
+            register("firestone_ore", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(
+                    2.0f, 3.0f).requiresCorrectToolForDrops()), new Item.Properties());
+
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties ){
         RegistryObject<T> block = BLOCKS.register(name, supplier);
@@ -39,6 +45,6 @@ public class BlockInit {
             return BlockTags.create(new ResourceLocation(TwMod.MODID, location));
         }
 
-        //tw shows other create functions in vid
+        //tw shows other tag create functions in vid
     }
 }

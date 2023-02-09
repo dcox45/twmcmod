@@ -1,6 +1,8 @@
 {
   "item.twmod.first_item":"First Mod Item",
+  "item.twmod.firestone_shard": "Firestone Shard",
   "block.twmod.first_block" : "First Block",
+  "block.twmod.firestone_ore": "Firestone Ore",
   "item.twmod.first_food": "First Food",
 
   "item.twmod.mysword_tool": "Custom Sword",

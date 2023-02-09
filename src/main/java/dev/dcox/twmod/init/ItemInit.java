@@ -11,12 +11,14 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
 public class ItemInit {
 
@@ -24,6 +26,14 @@ public class ItemInit {
 
     public static final RegistryObject<Item> FIRST_ITEM =
               ITEMS.register("first_item", () -> new Item(props()));
+
+    public static final RegistryObject<Item> firestoneShard =
+            ITEMS.register("firestone_shard", () -> new Item(props()) {
+                @Override
+                public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                    return 3000;
+                }
+            });
 
 
     public static final RegistryObject<Item> first_food =
@@ -82,7 +92,7 @@ public class ItemInit {
                 3.0f,
                 10,
                 BlockInit.Tags.needs_firestone_tool,
-                () -> Ingredient.of(ItemInit.FIRST_ITEM.get()));
+                () -> Ingredient.of(ItemInit.firestoneShard.get()));
     }
 
     public static class ArmorTiers {
@@ -94,7 +104,7 @@ public class ItemInit {
                 SoundEvents.ARMOR_EQUIP_DIAMOND,
                 0.0f,
                 0.0f,
-                () -> Ingredient.of(ItemInit.FIRST_ITEM.get()));
+                () -> Ingredient.of(ItemInit.firestoneShard.get()));
     }
 
 }

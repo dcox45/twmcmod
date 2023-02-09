@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "twmod:first_block",
     "twmod:firestone_ore"
   ]
 }

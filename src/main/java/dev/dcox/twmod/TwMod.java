@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(TwMod.MODID)
-    @EventBusSubscriber
+@EventBusSubscriber
 
 public class TwMod{
 
@@ -40,7 +40,11 @@ public class TwMod{
                 .displayItems((featureFlags, output, hasOp) -> {
                     //for(int i = 0; i < ItemInit.ITEMS.getEntries().size())
                     output.accept(ItemInit.FIRST_ITEM.get());
+                    output.accept(ItemInit.firestoneShard.get());
+
                     output.accept(BlockInit.firstBlock.get());
+                    output.accept(BlockInit.FIRESTONE_ORE.get());
+
                     output.accept(ItemInit.first_food.get());
 
                     output.accept(ItemInit.myAxe_tool.get());
@@ -68,6 +72,9 @@ public class TwMod{
         {
             event.accept(BlockInit.firstBlock);
         }
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(BlockInit.FIRESTONE_ORE);
+        }
         if (event.getTab() == CreativeModeTabs.FOOD_AND_DRINKS)
         {
             event.accept(ItemInit.first_food);
@@ -79,8 +86,6 @@ public class TwMod{
             event.accept(ItemInit.myHoe_tool);
             event.accept(ItemInit.myShovel_tool);
             event.accept(ItemInit.mySword_tool);
-
-
         }
         if (event.getTab() == CreativeModeTabs.COMBAT)
         {
@@ -89,6 +94,9 @@ public class TwMod{
             event.accept(ItemInit.firestone_leggings);
             event.accept(ItemInit.firestone_boots);
 
+        }
+        if (event.getTab() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ItemInit.firestoneShard);
         }
     }
 
