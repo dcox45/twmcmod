@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "twmod:first_item"
+    }
+  },
+  "result": {
+    "item": "twmod:mypickaxe_tool"
+  }
+}

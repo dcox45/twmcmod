@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "twmod:first_item"
+    }
+  },
+  "result": {
+    "item": "twmod:firestone_leggings"
+  }
+}

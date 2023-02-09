@@ -1,0 +1,16 @@
+  {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "X X",
+      "XXX",
+      "XXX"
+    ],
+    "key": {
+      "X": {
+        "item": "twmod:first_item"
+      }
+    },
+    "result": {
+      "item": "twmod:firestone_chestplate"
+    }
+  }
