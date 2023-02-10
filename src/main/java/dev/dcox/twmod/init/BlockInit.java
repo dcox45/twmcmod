@@ -28,7 +28,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> FIRESTONE_ORE =
             register("firestone_ore", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(
-                    2.0f, 3.0f).requiresCorrectToolForDrops()), new Item.Properties());
+                    3.0f, 3.0f).requiresCorrectToolForDrops()), new Item.Properties());
 
     public static final RegistryObject<Block> HAZARDOUS_WASTE =
             register("hazwas_animated", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(

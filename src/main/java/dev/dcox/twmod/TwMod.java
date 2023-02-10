@@ -41,6 +41,8 @@ public class TwMod{
                     //for(int i = 0; i < ItemInit.ITEMS.getEntries().size())
                     output.accept(ItemInit.FIRST_ITEM.get());
                     output.accept(ItemInit.firestoneShard.get());
+                    output.accept(ItemInit.FLAMETHROWER.get());
+
 
                     output.accept(BlockInit.firstBlock.get());
                     output.accept(BlockInit.FIRESTONE_ORE.get());
@@ -69,6 +71,8 @@ public class TwMod{
         if (event.getTab() == CreativeModeTabs.COMBAT)
         {
             event.accept(ItemInit.FIRST_ITEM);
+            event.accept(ItemInit.FLAMETHROWER);
+
         }
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
         {

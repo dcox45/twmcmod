@@ -2,6 +2,7 @@ package dev.dcox.twmod.init;
 
 import dev.dcox.twmod.TwMod;
 import dev.dcox.twmod.base.FireArmorMaterial;
+import dev.dcox.twmod.items.Flamethrower;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -26,6 +27,9 @@ public class ItemInit {
 
     public static final RegistryObject<Item> FIRST_ITEM =
               ITEMS.register("first_item", () -> new Item(props()));
+
+    public static final RegistryObject<Flamethrower> FLAMETHROWER =
+            ITEMS.register("flamethrower", () -> new Flamethrower(props()));
 
     public static final RegistryObject<Item> firestoneShard =
             ITEMS.register("firestone_shard", () -> new Item(props()) {
