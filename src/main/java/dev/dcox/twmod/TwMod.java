@@ -47,6 +47,7 @@ public class TwMod{
                     output.accept(BlockInit.firstBlock.get());
                     output.accept(BlockInit.FIRESTONE_ORE.get());
                     output.accept(BlockInit.HAZARDOUS_WASTE.get());
+                    output.accept(BlockInit.FIRESTONE_BLOCK.get());
 
 
                     output.accept(ItemInit.first_food.get());
@@ -78,6 +79,8 @@ public class TwMod{
         {
             event.accept(BlockInit.firstBlock);
             event.accept(BlockInit.HAZARDOUS_WASTE);
+            event.accept(BlockInit.FIRESTONE_BLOCK);
+
 
         }
         if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {

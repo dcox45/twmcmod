@@ -30,14 +30,12 @@ public class Flamethrower extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
         if(hand == InteractionHand.MAIN_HAND && !level.isClientSide()) {
-            //player.sendSystemMessage(Component.literal("your mum"));
-            Vec3 vector3d = player.getViewVector(1.0F);
-            for(int i = 0; i < 5; i++) {
-                SmallFireball fireballentity = new SmallFireball(level, player, player.getLookAngle().x + i, player.getLookAngle().y + i, player.getLookAngle().z + i);
-                fireballentity.setPos(player.getX(), player.getY(0.5D) + 0.5D, player.getZ() );
-                fireballentity.noPhysics = true;
-                //fireballentity.explosion = 3;
-
+            Vec3 look = player.getLookAngle();
+            Vec3 eyePos = player.getEyePosition(1.0f);
+            for(int i = 0; i < 4; i++) {
+                SmallFireball fireballentity = new SmallFireball(level, player, look.x * 1.5, look.y * 1.5, look.z * 1.5);
+                fireballentity.setPos(eyePos.x  +look.x * (i + 1), eyePos.y + look.y * (i + 1), eyePos.z + look.z * (i + 1));
+               // fireballentity.noPhysics = true;
                 level.addFreshEntity(fireballentity);
             }
         }

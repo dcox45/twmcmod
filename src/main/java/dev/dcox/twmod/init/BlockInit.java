@@ -2,6 +2,7 @@ package dev.dcox.twmod.init;
 
 import com.mojang.datafixers.types.templates.Tag;
 import dev.dcox.twmod.TwMod;
+import dev.dcox.twmod.blocks.FirestoneBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -34,6 +35,9 @@ public class BlockInit {
             register("hazwas_animated", () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(
                     2.0f, 3.0f)), new Item.Properties());
 
+    public static final RegistryObject<FirestoneBlock> FIRESTONE_BLOCK =
+            register("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(
+                    2.0f, 3.0f)), new Item.Properties());
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties ){
         RegistryObject<T> block = BLOCKS.register(name, supplier);
