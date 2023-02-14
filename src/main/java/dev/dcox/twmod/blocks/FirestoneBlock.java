@@ -28,23 +28,13 @@ public class FirestoneBlock extends Block {
         super(properties);
     }
 
-//    public void stepOn(Level p_153777_, BlockPos p_153778_, BlockState p_153779_, Entity p_153780_) {
-//        if (!p_153780_.isSteppingCarefully() && p_153780_ instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)p_153780_)) {
-//            p_153780_.hurt(DamageSource.HOT_FLOOR, 1.0F);
-//        }
-//
-//        super.stepOn(p_153777_, p_153778_, p_153779_, p_153780_);
-//    }
+    public void stepOn(Level p_153777_, BlockPos p_153778_, BlockState p_153779_, Entity p_153780_) {
+        if (!p_153780_.isSteppingCarefully() && p_153780_ instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)p_153780_)) {
+            p_153780_.hurt(DamageSource.HOT_FLOOR, 1.0F);
+        }
 
-//    @Override
-//    public InteractionResult use(BlockState state, ServerLevel level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-//        if(!level.isClientSide()){
-//            player.sendSystemMessage(Component.literal("your mum"));
-//            fireUpBlocks(level, pos);
-//        }
-//        return InteractionResult.sidedSuccess(!level.isClientSide());
-//        //return super.use(state, p_60504_, p_60505_, p_60506_, p_60507_, p_60508_);
-//    }
+        super.stepOn(p_153777_, p_153778_, p_153779_, p_153780_);
+    }
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
@@ -54,10 +44,10 @@ public class FirestoneBlock extends Block {
         }
     }
 
-    private static void fireUpBlocks(ServerLevel level, BlockPos pos){
+    private static void fireUpBlocks(ServerLevel level, BlockPos pos) {
         int radius = 1;
 
-        while(radius < 10) {
+        while (radius < 10) {
             for (Direction direction : Direction.values()) {
                 BlockPos newPos = pos.relative(direction, radius);
                 BlockState blockstate = level.getBlockState(newPos);
@@ -65,19 +55,12 @@ public class FirestoneBlock extends Block {
                     level.setBlockAndUpdate(newPos, BaseFireBlock.getState(level, newPos));
 
                 }
-//                if (blockstate.getBlock() instanceof BonemealableBlock bonemealable) {
-//                    for(int attempt = 0; attempt < 10; attempt++) {
-//                        bonemealable.performBonemeal(level, level.getRandom(), newPos, blockstate);
-//                        level.sendParticles(ParticleTypes.COMPOSTER, newPos.getX(), newPos.getY() + 1, newPos.getZ(), 1, 0, 0, 0, 0);
-//                    }
-//                }
-            }
 
+            }
             ++radius;
         }
+
     }
-
-
 
     private static BlockPos randomPointOnSphere(BlockPos start, float radius, RandomSource random) {
         double u = random.nextDouble();

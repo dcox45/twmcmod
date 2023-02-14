@@ -35,7 +35,6 @@ public class Flamethrower extends Item {
             for(int i = 0; i < 4; i++) {
                 SmallFireball fireballentity = new SmallFireball(level, player, look.x * 1.5, look.y * 1.5, look.z * 1.5);
                 fireballentity.setPos(eyePos.x  +look.x * (i + 1), eyePos.y + look.y * (i + 1), eyePos.z + look.z * (i + 1));
-               // fireballentity.noPhysics = true;
                 level.addFreshEntity(fireballentity);
             }
         }
