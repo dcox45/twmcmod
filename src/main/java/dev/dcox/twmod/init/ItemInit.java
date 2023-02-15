@@ -31,6 +31,9 @@ public class ItemInit {
     public static final RegistryObject<Flamethrower> FLAMETHROWER =
             ITEMS.register("flamethrower", () -> new Flamethrower(props()));
 
+    public static final RegistryObject<Item> FLAME_CANNISTER =
+            ITEMS.register("flame_cannister", () -> new Item(props()));
+
     public static final RegistryObject<Item> firestoneShard =
             ITEMS.register("firestone_shard", () -> new Item(props()) {
                 @Override

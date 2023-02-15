@@ -1,18 +1,16 @@
 package dev.dcox.twmod.init;
 
-import com.mojang.datafixers.types.templates.Tag;
 import dev.dcox.twmod.TwMod;
+import dev.dcox.twmod.blocks.FuelRefiner;
 import dev.dcox.twmod.blocks.FirestoneBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -43,6 +41,10 @@ public class BlockInit {
             register("firestone_block", () -> new FirestoneBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(
                     2.0f, 3.0f)), new Item.Properties());
 
+
+    public static final RegistryObject<FuelRefiner> FUEL_REFINER =
+            register("fuel_refiner", () -> new FuelRefiner
+                    (BlockBehaviour.Properties.of(Material.AMETHYST).dynamicShape().noOcclusion()), new Item.Properties());
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties ){
         RegistryObject<T> block = BLOCKS.register(name, supplier);

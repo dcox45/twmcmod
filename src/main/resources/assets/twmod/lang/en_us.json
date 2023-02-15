@@ -20,5 +20,7 @@
   "item.twmod.firestone_boots": "Firestone Boots",
 
   "item.twmod.flamethrower": "Flamethrower",
-  "block.twmod.firestone_block": "Firestone Block"
+  "block.twmod.firestone_block": "Firestone Block",
+  "block.twmod.fuel_refiner": "Fuel Refiner",
+  "item.twmod.flame_cannister": "Flame Cannister"
 }

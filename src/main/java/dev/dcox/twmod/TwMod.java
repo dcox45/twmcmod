@@ -42,13 +42,14 @@ public class TwMod{
                     output.accept(ItemInit.FIRST_ITEM.get());
                     output.accept(ItemInit.firestoneShard.get());
                     output.accept(ItemInit.FLAMETHROWER.get());
-
+                    output.accept(ItemInit.FLAME_CANNISTER.get());
 
                     output.accept(BlockInit.firstBlock.get());
                     output.accept(BlockInit.FIRESTONE_ORE.get());
                     output.accept(BlockInit.DEEPSLATE_FIRESTONE_ORE.get());
                     output.accept(BlockInit.HAZARDOUS_WASTE.get());
                     output.accept(BlockInit.FIRESTONE_BLOCK.get());
+                    output.accept(BlockInit.FUEL_REFINER.get());
 
 
                     output.accept(ItemInit.first_food.get());
@@ -74,6 +75,8 @@ public class TwMod{
         {
             event.accept(ItemInit.FIRST_ITEM);
             event.accept(ItemInit.FLAMETHROWER);
+            event.accept(ItemInit.FLAME_CANNISTER);
+
 
         }
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
@@ -99,6 +102,9 @@ public class TwMod{
             event.accept(ItemInit.myHoe_tool);
             event.accept(ItemInit.myShovel_tool);
             event.accept(ItemInit.mySword_tool);
+
+            event.accept(BlockInit.FUEL_REFINER);
+
         }
         if (event.getTab() == CreativeModeTabs.COMBAT)
         {
