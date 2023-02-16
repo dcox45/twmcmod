@@ -1,6 +1,7 @@
 package dev.dcox.twmod;
         
 import dev.dcox.twmod.init.BlockInit;
+import dev.dcox.twmod.init.FluidInit;
 import dev.dcox.twmod.init.ItemInit;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +30,8 @@ public class TwMod{
 
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
-
+        FluidInit.FLUID_TYPES.register(bus);
+        FluidInit.FLUIDS.register(bus);
     }
 
     private void registerTabs(CreativeModeTabEvent.Register event)
@@ -43,6 +45,7 @@ public class TwMod{
                     output.accept(ItemInit.firestoneShard.get());
                     output.accept(ItemInit.FLAMETHROWER.get());
                     output.accept(ItemInit.FLAME_CANNISTER.get());
+                    output.accept(FluidInit.NAPALM.bucket.get());
 
                     output.accept(BlockInit.firstBlock.get());
                     output.accept(BlockInit.FIRESTONE_ORE.get());
@@ -104,7 +107,7 @@ public class TwMod{
             event.accept(ItemInit.mySword_tool);
 
             event.accept(BlockInit.FUEL_REFINER);
-
+            event.accept(FluidInit.NAPALM.bucket.get());
         }
         if (event.getTab() == CreativeModeTabs.COMBAT)
         {
