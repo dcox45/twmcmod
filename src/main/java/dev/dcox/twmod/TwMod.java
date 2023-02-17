@@ -1,6 +1,7 @@
 package dev.dcox.twmod;
         
 import dev.dcox.twmod.init.BlockInit;
+import dev.dcox.twmod.init.EntityInit;
 import dev.dcox.twmod.init.FluidInit;
 import dev.dcox.twmod.init.ItemInit;
 import net.minecraft.network.chat.Component;
@@ -32,6 +33,7 @@ public class TwMod{
         BlockInit.BLOCKS.register(bus);
         FluidInit.FLUID_TYPES.register(bus);
         FluidInit.FLUIDS.register(bus);
+        EntityInit.ENTITIES.register(bus);
     }
 
     private void registerTabs(CreativeModeTabEvent.Register event)
