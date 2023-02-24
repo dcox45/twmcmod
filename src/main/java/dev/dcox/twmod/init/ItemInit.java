@@ -14,6 +14,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.registries.DeferredRegister;
@@ -75,6 +76,13 @@ public class ItemInit {
             ITEMS.register("firestone_boots", () -> new ArmorItem(
                     ArmorTiers.firestone, EquipmentSlot.FEET, props()));
 
+    public static final RegistryObject<ForgeSpawnEggItem> FIRENSAKE_SPAWN_EGG =
+            ITEMS.register("firesnake_spawn_egg",() -> new ForgeSpawnEggItem(
+                    EntityInit.FIRESNAKE,
+                    0xe30d4b,
+                    0xfff730,
+                    props().stacksTo(64)));
+
     private static Item.Properties props() {
         return new Item.Properties();
     }
@@ -90,6 +98,8 @@ public class ItemInit {
                         .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600),
                                 0.9f).build();
     }
+
+
 
     public static class ToolTiers {
         public static final Tier example_tier = new ForgeTier(
@@ -113,5 +123,7 @@ public class ItemInit {
                 0.0f,
                 () -> Ingredient.of(ItemInit.firestoneShard.get()));
     }
+
+
 
 }

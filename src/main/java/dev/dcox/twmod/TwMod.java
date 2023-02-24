@@ -70,6 +70,9 @@ public class TwMod{
                     output.accept(ItemInit.firestone_leggings.get());
                     output.accept(ItemInit.firestone_boots.get());
 
+                    output.accept(ItemInit.FIRENSAKE_SPAWN_EGG.get());
+
+
                 })
         );
     }
@@ -122,6 +125,12 @@ public class TwMod{
         if (event.getTab() == CreativeModeTabs.INGREDIENTS){
             event.accept(ItemInit.firestoneShard);
         }
-    }
+
+        if (event.getTab() == CreativeModeTabs.SPAWN_EGGS){
+            event.accept(ItemInit.FIRENSAKE_SPAWN_EGG);
+
+        }
+
+        }
 
 }

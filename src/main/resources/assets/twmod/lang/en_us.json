@@ -23,5 +23,7 @@
   "block.twmod.firestone_block": "Firestone Block",
   "block.twmod.fuel_refiner": "Fuel Refiner",
   "item.twmod.flame_cannister": "Flame Cannister",
-  "item.twmod.napalm_fluid_bucket": "Bucket of Napalm"
+  "item.twmod.napalm_fluid_bucket": "Bucket of Napalm",
+
+  "item.twmod.firesnake_spawn_egg": "Spawn Firesnake"
 }
